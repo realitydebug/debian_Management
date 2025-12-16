@@ -1,4 +1,4 @@
 自用脚本
 ```
-curl h.mdkill.top | bash
+curl h.mekill.top | bash
 ```
