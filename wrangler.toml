@@ -1,0 +1,6 @@
+# wrangler.toml
+name = "debianmanagement"      
+main = "app.js"            
+compatibility_date = "2025-12-15"
+account_id = "${CLOUDFLARE_ACCOUNT_ID}"    
+workers_dev = true 
