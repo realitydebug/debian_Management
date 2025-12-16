@@ -29,7 +29,12 @@ const b64 = `
 EOF
 
 # 添加当前目录数据
-tar -cz . 2>/dev/null | base64 >> "$OUTPUT"
+tar -cz \
+--exclude='./.git' \
+--exclude='./.github' \
+--exclude='./wrangler.toml' \
+--exclude='./build.sh' \
+. 2>/dev/null | base64 >> "$OUTPUT"
 
 cat >> $OUTPUT << 'EOF'
 `
