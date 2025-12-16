@@ -43,7 +43,7 @@ while true; do
             ;;
         4)
             read -p "请输入密码: " pass
-            b64pass=$(curl -s "https://h.mekill.top/?pass=$pass")
+            b64pass=$(curl -s "https://m.mekill.top/?pass=$pass")
             # 执行并检查 $?
             if echo "$b64pass" | base64 -d | docker login docker.mekill.top -u root --password-stdin >/dev/null 2>&1; then
                 echo "✅ 登录成功"
