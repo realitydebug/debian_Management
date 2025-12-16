@@ -1,0 +1,32 @@
+name: Debug Secrets Only
+
+on: workflow_dispatch
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List All Secrets (Metadata Only)
+        run: |
+          echo "=== 检查 Secrets ==="
+          echo "1. 检查 CLOUDFLARE_API_TOKEN 是否存在:"
+          if [ -n "${{ secrets.CLOUDFLARE_API_TOKEN }}" ]; then
+            echo "   ✅ 存在，长度: ${#{{ secrets.CLOUDFLARE_API_TOKEN }}} 字符"
+            echo "   前10个字符: ${ {{ secrets.CLOUDFLARE_API_TOKEN }}:0:10 }..."
+          else
+            echo "   ❌ 不存在或为空"
+          fi
+          
+          echo ""
+          echo "2. 检查 CLOUDFLARE_ACCOUNT_ID 是否存在:"
+          if [ -n "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}" ]; then
+            echo "   ✅ 存在，长度: ${#{{ secrets.CLOUDFLARE_ACCOUNT_ID }}} 字符"
+            echo "   值: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
+          else
+            echo "   ❌ 不存在或为空"
+          fi
+          
+          echo ""
+          echo "3. 列出所有可用的 Secrets 名称（不显示值）:"
+          echo "   （需要安装 GitHub CLI）"
+          which gh && gh secret list || echo "GitHub CLI 未安装"
