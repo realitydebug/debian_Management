@@ -12,8 +12,8 @@ show_menu() {
     # echo -e "${GREEN}================================${NC}"
     # echo -e "${GREEN}       系统管理脚本             ${NC}"
     echo -e "${GREEN}================================${NC}"
-    echo -e "${BLUE}1. 安装/更新${NC}"
-    echo -e "${BLUE}2. 卸载${NC}"
+    echo -e "${NC}1. 安装/更新${NC}"
+    echo -e "${NC}2. 卸载${NC}"
     echo -e "${YELLOW}0. 返回${NC}"
     echo -e "${GREEN}================================${NC}"
 }
@@ -81,7 +81,7 @@ while true; do
             break
             ;;
     esac
-    read -s -p "按任意键返回..." </dev/tty
+    read -s -p "按回车键返回..." </dev/tty
 done
 
 

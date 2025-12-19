@@ -12,15 +12,15 @@ show_menu() {
     # echo -e "${GREEN}================================${NC}"
     # echo -e "${GREEN}       系统管理脚本             ${NC}"
     echo -e "${GREEN}================================${NC}"
-    echo -e "${BLUE}1. 安装/更新${NC}"
-    echo -e "${BLUE}2. 容器管理${NC}"
-    echo -e "${BLUE}3. 镜像管理${NC}"
-    echo -e "${BLUE}4. 登陆私有hub${NC}"
-    echo -e "${BLUE}5. 退出登陆私有hub${NC}"
-    echo -e "${BLUE}6. 配置毫秒镜像${NC}"
-    echo -e "${BLUE}7. 移除毫秒镜像${NC}"
-    echo -e "${BLUE}8. 卸载${NC}"
-    echo -e "${BLUE}9. 删除 Docker 数据${NC}"
+    echo -e "${NC}1. 安装/更新${NC}"
+    echo -e "${NC}2. 容器管理${NC}"
+    echo -e "${NC}3. 镜像管理${NC}"
+    echo -e "${NC}4. 登陆私有hub${NC}"
+    echo -e "${NC}5. 退出登陆私有hub${NC}"
+    echo -e "${NC}6. 配置毫秒镜像${NC}"
+    echo -e "${NC}7. 移除毫秒镜像${NC}"
+    echo -e "${NC}8. 卸载${NC}"
+    echo -e "${NC}9. 删除 Docker 数据${NC}"
     
     echo -e "${YELLOW}0. 返回${NC}"
     echo -e "${GREEN}================================${NC}"
@@ -80,7 +80,7 @@ while true; do
             break
             ;;
     esac
-    read -s -p "按任意键返回..." </dev/tty
+    read -s -p "按回车键返回..." </dev/tty
     break
 done
 

@@ -15,10 +15,10 @@ show_menu() {
     fi
     # 显示菜单
     echo -e "${GREEN}================================${NC}"
-    echo -e "${BLUE}1. 安装/更新${NC}"
-    echo -e "${BLUE}2. 配置用户信息${NC}"
-    echo -e "${BLUE}3. 查看配置${NC}"
-    echo -e "${BLUE}3. 卸载${NC}"
+    echo -e "${NC}1. 安装/更新${NC}"
+    echo -e "${NC}2. 配置用户信息${NC}"
+    echo -e "${NC}3. 查看配置${NC}"
+    echo -e "${NC}3. 卸载${NC}"
     echo -e "${YELLOW}0. 返回${NC}"
     echo -e "${GREEN}================================${NC}"
 }
@@ -56,7 +56,7 @@ while true; do
             break
             ;;
    esac
-    read -s -p "按任意键返回..." </dev/tty
+    read -s -p "按回车键返回..." </dev/tty
     break
 done
 

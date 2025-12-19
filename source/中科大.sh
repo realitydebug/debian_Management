@@ -23,4 +23,4 @@ echo "中科大源已配置"
 echo "开始更新列表"
 apt update
 echo "完成"
-read -s -p "按任意键返回..." </dev/tty
+read -s -p "按回车键返回..." </dev/tty

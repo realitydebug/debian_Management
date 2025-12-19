@@ -71,12 +71,12 @@ while true; do
         [ "$is_running" -eq 1 ] && echo "状态: 运行中" || echo "状态: 未运行"
         if docker ps -a --format "{{.Names}}" | grep -q "$container_name"; then
             echo -e "${GREEN}================================${NC}"
-            echo -e "${BLUE}1. 启动${NC}"
-            echo -e "${BLUE}2. 停止${NC}"
-            echo -e "${BLUE}3. 重启${NC}"
-            echo -e "${BLUE}4. 更新${NC}"
-            echo -e "${BLUE}5. 删除${NC}"
-            echo -e "${BLUE}6. 进入交互${NC}"
+            echo -e "${NC}1. 启动${NC}"
+            echo -e "${NC}2. 停止${NC}"
+            echo -e "${NC}3. 重启${NC}"
+            echo -e "${NC}4. 更新${NC}"
+            echo -e "${NC}5. 删除${NC}"
+            echo -e "${NC}6. 进入交互${NC}"
             echo -e "${YELLOW}0. 返回${NC}"
             echo -e "${GREEN}================================${NC}"
             read -p "请选择: " choice
@@ -133,10 +133,10 @@ while true; do
             sleep 1
         fi
 
-        # read -s -p "按任意键返回..." </dev/tty
+        # read -s -p "按回车键返回..." </dev/tty
     else
         echo "无效的选择!"
-        # read -s -p "按任意键返回..." </dev/tty
+        # read -s -p "按回车键返回..." </dev/tty
     fi
-    read -s -p "按任意键返回..." </dev/tty
+    read -s -p "按回车键返回..." </dev/tty
 done

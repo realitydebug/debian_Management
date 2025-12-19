@@ -62,13 +62,13 @@ show_menu() {
     # echo -e "${GREEN}================================${NC}"
     # echo -e "${GREEN}       系统管理脚本             ${NC}"
     echo -e "${GREEN}================================${NC}"
-    echo -e "${BLUE}1. 安装${NC}"
-    echo -e "${BLUE}2. 允许root登陆${NC}"
-    echo -e "${BLUE}3. 禁止root登陆${NC}"
-    echo -e "${BLUE}4. 仅密钥root登陆${NC}"
-    # echo -e "${BLUE}4. 允许密码登陆${NC}"
-    # echo -e "${BLUE}4. 不允许密码登陆${NC}"
-    echo -e "${BLUE}5. 添加固定公钥${NC}"
+    echo -e "${NC}1. 安装${NC}"
+    echo -e "${NC}2. 允许root登陆${NC}"
+    echo -e "${NC}3. 禁止root登陆${NC}"
+    echo -e "${NC}4. 仅密钥root登陆${NC}"
+    # echo -e "${NC}4. 允许密码登陆${NC}"
+    # echo -e "${NC}4. 不允许密码登陆${NC}"
+    echo -e "${NC}5. 添加固定公钥${NC}"
     echo -e "${YELLOW}0. 返回${NC}"
     echo -e "${GREEN}================================${NC}"
 }
@@ -103,7 +103,7 @@ while true; do
             break
             ;;
     esac
-    read -s -p "按任意键返回..." </dev/tty
+    read -s -p "按回车键返回..." </dev/tty
     break
 
 done

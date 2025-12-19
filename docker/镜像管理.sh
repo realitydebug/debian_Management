@@ -46,9 +46,9 @@ while true; do
             echo "没有容器使用此镜像"
         fi
         echo -e "${GREEN}================================${NC}"
-        echo -e "${BLUE}1. 更新${NC}"
-        echo -e "${BLUE}2. 删除${NC}"
-        echo -e "${BLUE}9. 删除所有悬空镜像${NC}"
+        echo -e "${NC}1. 更新${NC}"
+        echo -e "${NC}2. 删除${NC}"
+        echo -e "${NC}9. 删除所有悬空镜像${NC}"
         echo -e "${YELLOW}0. 返回${NC}"
         echo -e "${GREEN}================================${NC}"
         read -p "请选择: " choice
@@ -74,7 +74,7 @@ while true; do
         echo "无效的选择!"
         
     fi
-    read -s -p "按任意键返回..." </dev/tty
+    read -s -p "按回车键返回..." </dev/tty
 done
 
 
